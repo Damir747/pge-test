@@ -1,0 +1,186 @@
+.header__div {
+	display: flex;
+	width: 100%
+}
+
+#form--search {
+	margin-left: auto;
+}
+
+.input__element {
+	margin-right: 10px;
+}
+
+.search-button {}
+
+table {
+	overflow: hidden;
+	width: 100%;
+	border: 1px solid grey;
+	border-collapse: collapse;
+}
+
+th:nth-child(1) {
+	width: 300px;
+}
+
+th:nth-child(2) {
+	width: 109px;
+}
+
+th:nth-child(3) {
+	width: 198px;
+}
+
+th:nth-child(4) {
+	width: auto;
+}
+
+th:nth-child(5) {
+	width: 206px;
+}
+
+
+tbody tr:nth-child(odd) {
+	background-color: lightgrey;
+}
+
+tbody tr:nth-child(even) {
+	background-color: white;
+}
+
+table th,
+table td {
+	border-left: 1px solid black;
+}
+
+table th:last-child,
+table td:last-child {
+	border-right: 1px solid black;
+}
+
+.th--active {
+	color: green;
+}
+
+td {
+	height: 20px;
+	font-size: 16px;
+}
+
+.tr__item {
+	font-size: 16px;
+}
+
+.card__item--active,
+.tr__item--active {
+	color: green;
+}
+
+.card__item-unread,
+.tr__item-unread {
+	font-weight: bold;
+}
+
+.tab--active {
+	background-color: green;
+}
+
+.container__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 10px 10px;
+	padding: 10px;
+}
+
+.card {
+	font-size: 0.8rem;
+	border: solid 1px;
+	min-width: 250px;
+	height: 150px;
+	margin-bottom: 50px;
+	display: grid;
+	grid-template-columns: 30% auto 25%;
+	grid-gap: 5px;
+	grid-auto-rows: minmax(30px, auto);
+}
+
+/* для выравнивания */
+.card__item {
+	display: flex;
+	justify-content: left;
+}
+
+/* временно для расположения элементов */
+.card__item,
+.card__fellowWorker {
+	border: dotted 1px;
+}
+
+.card__date__title {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.card__date__value {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.card__importance__title {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.card__importance__value {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.card__equipment__title {
+	grid-column: 1;
+	grid-row: 3;
+}
+
+.card__equipment__value {
+	grid-column: 2;
+	grid-row: 3;
+}
+
+.card__message__title {
+	grid-column: 1;
+	grid-row: 4;
+}
+
+.card__message__value {
+	grid-column: 2 / 4;
+	grid-row: 4;
+}
+
+.card__fellowWorker {
+	grid-column: 3;
+	grid-row: 1/4;
+}
+
+.div__avatar {
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	overflow: hidden;
+}
+
+.avatar {
+	display: block;
+	object-fit: cover;
+	width: 60px;
+	height: 60px;
+	border-radius: 100px;
+	border: 1px solid black;
+}
+
+.search-results {
+	background-color: orange;
+	text-decoration: underline;
+}
