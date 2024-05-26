@@ -1,6 +1,5 @@
-
 import { mockHeader } from "../mock/mock";
-import { classname } from "../utils/utls";
+import { classname } from "../utils/utils";
 
 function TableHeader({ activeSort, handleClick }) {
 	return (

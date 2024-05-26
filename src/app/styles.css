@@ -1,43 +1,79 @@
-.header__div {
+.app {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 50px auto 50px;
+}
+
+.app-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	padding: 10px;
+}
+
+.header-div {
 	display: flex;
 	width: 100%
 }
 
-#form--search {
-	margin-left: auto;
+.tab {
+	height: 25px;
+	min-width: 80px;
+	margin: 5px 0px;
+}
+
+#form-search {
+	margin: 0px 0px 0px auto;
+	padding: 0px;
 }
 
 .input__element {
+	margin: 0;
 	margin-right: 10px;
+	height: 20px;
 }
 
-.search-button {}
+.search-button {
+	height: 25px;
+	min-width: 60px;
+}
 
 table {
-	overflow: hidden;
+	margin: 0px 10px;
 	width: 100%;
 	border: 1px solid grey;
 	border-collapse: collapse;
+	height: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-th:nth-child(1) {
-	width: 300px;
+tr td:nth-child(1),
+th td:nth-child(1) {
+	width: 180px;
 }
 
-th:nth-child(2) {
-	width: 109px;
+tr td:nth-child(2),
+th td:nth-child(2) {
+	width: 90px;
 }
 
-th:nth-child(3) {
-	width: 198px;
+tr td:nth-child(3),
+th td:nth-child(3) {
+	width: 180px;
 }
 
-th:nth-child(4) {
+tr td:nth-child(4),
+th td:nth-child(4) {
 	width: auto;
 }
 
-th:nth-child(5) {
-	width: 206px;
+tr td:nth-child(5),
+th td:nth-child(5) {
+	width: 180px;
 }
 
 
@@ -61,6 +97,7 @@ table td:last-child {
 
 .th--active {
 	color: green;
+	font-weight: bold;
 }
 
 td {
@@ -77,84 +114,83 @@ td {
 	color: green;
 }
 
-.card__item-unread,
-.tr__item-unread {
+.card__item--unread,
+.tr__item--unread {
 	font-weight: bold;
 }
 
 .tab--active {
-	background-color: green;
+	background-color: cyan;
 }
 
 .container__cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	grid-gap: 10px 10px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 10px;
 	padding: 10px;
+	align-self: start;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .card {
 	font-size: 0.8rem;
-	border: solid 1px;
-	min-width: 250px;
-	height: 150px;
-	margin-bottom: 50px;
+	padding: 10px;
+	margin: 0px 0px 10% 0px;
+	border: solid 2px;
+	min-width: 300px;
+	height: 200px;
 	display: grid;
 	grid-template-columns: 30% auto 25%;
 	grid-gap: 5px;
 	grid-auto-rows: minmax(30px, auto);
 }
 
-/* для выравнивания */
-.card__item {
-	display: flex;
-	justify-content: left;
-}
+.card__item {}
 
-/* временно для расположения элементов */
-.card__item,
-.card__fellowWorker {
-	border: dotted 1px;
-}
+.card__fellowWorker {}
 
-.card__date__title {
+.card__date-title {
 	grid-column: 1;
 	grid-row: 1;
 }
 
-.card__date__value {
+.card__date-value {
 	grid-column: 2;
 	grid-row: 1;
 }
 
-.card__importance__title {
+.card__importance-title {
 	grid-column: 1;
 	grid-row: 2;
 }
 
-.card__importance__value {
+.card__importance-value {
 	grid-column: 2;
 	grid-row: 2;
 }
 
-.card__equipment__title {
+.card__equipment-title {
 	grid-column: 1;
 	grid-row: 3;
 }
 
-.card__equipment__value {
+.card__equipment-value {
 	grid-column: 2;
 	grid-row: 3;
 }
 
-.card__message__title {
+.card__message-title {
 	grid-column: 1;
 	grid-row: 4;
 }
 
-.card__message__value {
+.card__message-value {
+	text-overflow: ellipsis;
 	grid-column: 2 / 4;
 	grid-row: 4;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .card__fellowWorker {
@@ -162,16 +198,15 @@ td {
 	grid-row: 1/4;
 }
 
-.div__avatar {
+.card__fellowWorker-div {
 	margin-top: 5px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	overflow: hidden;
 }
 
-.avatar {
+.fellowWorker-avatar {
 	display: block;
 	object-fit: cover;
 	width: 60px;
@@ -180,7 +215,32 @@ td {
 	border: 1px solid black;
 }
 
+.card__fellowWorker-label {
+	text-align: center;
+}
+
 .search-results {
-	background-color: orange;
+	background-color: cyan;
 	text-decoration: underline;
+	display: inline-block;
+}
+
+.app-footer {
+	height: 50px;
+}
+
+.pagination__div {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.pagination__left,
+.pagination__right {
+	margin: 5px;
+}
+
+.pagination__nav {
+	margin: 5px;
 }

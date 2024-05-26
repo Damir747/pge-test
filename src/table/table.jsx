@@ -1,23 +1,18 @@
-import { useState } from "react";
 import TableHeader from "./table-header";
 import TableRows from "./table-rows";
-import { defaultSort, defaultSortWay } from '../utils/const.js';
-import { mockHeader } from "../mock/mock.js";
 
-function Table({ searchStr, filterStr }) {
-	const [sort, setSort] = useState(mockHeader[defaultSort]);
-	// const [sortWay, setSortWay] = useState(defaultSortWay);
+function Table({ activeSort, setActiveSort, shownTableData, changeElement, searchStr }) {
 
 	return (
 		<table>
 			<TableHeader
-				activeSort={sort}
-				handleClick={setSort}
+				activeSort={activeSort}
+				handleClick={setActiveSort}
 			/>
 			<TableRows
-				sort={sort}
+				shownTableData={shownTableData}
+				changeElement={changeElement}
 				searchStr={searchStr}
-				filterStr={filterStr}
 			/>
 		</table>
 	);
